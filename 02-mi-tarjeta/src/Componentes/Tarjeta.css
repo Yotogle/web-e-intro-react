@@ -1,0 +1,86 @@
+
+
+.tarjeta-presentacion {
+  font-family: 'Arial', sans-serif; /* Fuente legible */
+  width: 300px; 
+  background-color: #ffffff; 
+  border: 1px solid #e0e0e0;
+  border-radius: 10px; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+  margin: 20px auto; 
+  padding: 20px; 
+  text-align: center; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.tarjeta-presentacion:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+.tarjeta-contenido {
+  width: 100%; 
+}
+
+.tarjeta-nombre {
+  font-size: 1.8em; 
+  color: #333333;
+  margin-bottom: 5px; 
+}
+
+.tarjeta-titulo {
+  font-size: 1.1em;
+  color: #6200ee; 
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.tarjeta-empresa {
+  font-size: 1em;
+  color: #555555;
+  margin-bottom: 15px;
+}
+
+.tarjeta-contacto {
+  border-top: 1px solid #eeeeee; 
+  padding-top: 15px;
+  margin-top: 15px;
+}
+
+.tarjeta-email,
+.tarjeta-telefono {
+  font-size: 0.9em;
+  color: #777777;
+  margin-bottom: 5px;
+}
+
+.tarjeta-email::before {
+
+  margin-right: 5px;
+}
+
+.tarjeta-telefono::before {
+
+  margin-right: 5px;
+}
+
+
+@media (max-width: 400px) {
+  .tarjeta-presentacion {
+    width: 90%; 
+    margin: 15px auto;
+    padding: 15px;
+  }
+
+  .tarjeta-nombre {
+    font-size: 1.5em;
+  }
+
+  .tarjeta-titulo {
+    font-size: 1em;
+  }
+}
