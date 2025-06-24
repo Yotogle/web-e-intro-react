@@ -1,0 +1,186 @@
+/* src/App.css */
+
+/* Estilos generales para el cuerpo y el contenedor principal */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Alinea al inicio verticalmente */
+  min-height: 100vh;
+  color: #333;
+}
+
+.task-counter-container {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  margin-top: 50px; /* Margen superior para separarlo del borde */
+}
+
+/* Títulos */
+.main-title {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-size: 2.5em;
+  font-weight: 700;
+}
+
+.section-title {
+  color: #34495e;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 1.8em;
+  border-bottom: 2px solid #ecf0f1;
+  padding-bottom: 10px;
+}
+
+/* Sección de entrada (inputs y botón) */
+.input-section {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos salten de línea si no hay espacio */
+  gap: 15px;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.task-input,
+.duration-input {
+  flex: 1; /* Permite que los inputs crezcan para ocupar espacio */
+  padding: 12px 15px;
+  border: 1px solid #bdc3c7;
+  border-radius: 8px;
+  font-size: 1em;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  min-width: 150px; /* Asegura que no se hagan demasiado pequeños */
+}
+
+.task-input:focus,
+.duration-input:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+  outline: none;
+}
+
+.add-button {
+  padding: 12px 25px;
+  background-color: #27ae60; /* Verde atractivo */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  white-space: nowrap; /* Evita que el texto del botón se rompa */
+}
+
+.add-button:hover {
+  background-color: #229954;
+  transform: translateY(-2px);
+}
+
+/* Lista de tareas */
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 350px; /* Altura máxima para scroll */
+  overflow-y: auto;
+  border: 1px solid #ecf0f1;
+  border-radius: 8px;
+  background-color: #fdfdfd;
+}
+
+/* Estilos de cada item de la lista */
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #ecf0f1;
+  font-size: 1.1em;
+  color: #555;
+  background-color: #ffffff;
+  transition: background-color 0.2s ease;
+}
+
+.task-item:last-child {
+  border-bottom: none;
+}
+
+.task-item:hover {
+  background-color: #f7f9fb;
+}
+
+.task-info {
+  flex-grow: 1; /* Permite que la información de la tarea ocupe espacio */
+  text-align: left;
+  word-break: break-word; /* Para nombres de tarea largos */
+  padding-right: 15px; /* Espacio antes del botón */
+}
+
+/* Botón de eliminar */
+.delete-button {
+  padding: 8px 15px;
+  background-color: #e74c3c; /* Rojo para eliminar */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9em;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  flex-shrink: 0; /* Evita que el botón se encoja */
+}
+
+.delete-button:hover {
+  background-color: #c0392b;
+}
+
+/* Mensaje de lista vacía */
+.empty-list-message {
+  text-align: center;
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #ecf0f1;
+  border-radius: 8px;
+  color: #7f8c8d;
+  font-style: italic;
+}
+
+/* Total de tiempo */
+.total-time {
+  text-align: right;
+  margin-top: 30px;
+  color: #2c3e50;
+  font-size: 1.5em;
+  font-weight: 600;
+  padding-top: 15px;
+  border-top: 2px solid #ecf0f1;
+}
+
+/* Estilos para el scrollbar (Webkit browsers) */
+.task-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.task-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.task-list::-webkit-scrollbar-thumb {
+  background: #bdc3c7;
+  border-radius: 10px;
+}
+
+.task-list::-webkit-scrollbar-thumb:hover {
+  background: #95a5a6;
+}
