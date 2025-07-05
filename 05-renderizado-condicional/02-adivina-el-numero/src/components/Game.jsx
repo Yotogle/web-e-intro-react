@@ -1,11 +1,10 @@
-
-import { useState, useEffect } from 'react';
-import { InputNumber } from './InputNumber';
-import { Message } from './Message';
-import { RestartButton } from './RestartButton';
+import { useState, useEffect } from "react";
+import { InputNumber } from "./InputNumber";
+import { Message } from "./Message";
+import { RestartButton } from "./RestartButton";
 
 export const Game = () => {
-  const [targetNumber, setTargetNumber] = useState(0); 
+  const [targetNumber, setTargetNumber] = useState(0);
   const [userGuess, setUserGuess] = useState("");
   const [message, setMessage] = useState("¡Adivina un número entre 1 y 100!");
   const [gameOver, setGameOver] = useState(false);
@@ -25,10 +24,10 @@ export const Game = () => {
   const handleUserGuessChange = (value) => {
     setUserGuess(value);
     if (gameOver) {
-        setMessage("¡Adivina un número entre 1 y 100!");
-        setGameOver(false); 
+      setMessage("¡Adivina un número entre 1 y 100!");
+      setGameOver(false);
     } else if (value === "" || isNaN(parseInt(value, 10))) {
-        setMessage("¡Adivina un número entre 1 y 100!");
+      setMessage("¡Adivina un número entre 1 y 100!");
     }
   };
 
@@ -50,13 +49,23 @@ export const Game = () => {
   };
 
   return (
-    <div style={{ textAlign: 'center', maxWidth: '500px', margin: '50px auto', padding: '20px', border: '1px solid #eee', borderRadius: '8px', boxShadow: '0 2px 10px rgba(0,0,0,0.1)' }}>
+    <div
+      style={{
+        textAlign: "center",
+        maxWidth: "500px",
+        margin: "50px auto",
+        padding: "20px",
+        border: "1px solid #eee",
+        borderRadius: "8px",
+        boxShadow: "0 2px 10px rgba(0,0,0,0.1)",
+      }}
+    >
       <h1>Adivina el Número</h1>
-      
+
       <Message text={message} />
 
-      <InputNumber 
-        onNumberChange={handleUserGuessChange} 
+      <InputNumber
+        onNumberChange={handleUserGuessChange}
         value={userGuess}
         disabled={gameOver}
       />
@@ -64,17 +73,18 @@ export const Game = () => {
       {!gameOver && (
         <button
           onClick={handleCheckGuess}
-          disabled={userGuess === "" || isNaN(parseInt(userGuess, 10))} 
-          style={{ 
-            padding: '10px 20px', 
-            backgroundColor: '#28a745', 
-            color: 'white', 
-            border: 'none', 
-            borderRadius: '5px', 
-            cursor: 'pointer', 
-            fontSize: '1em',
-            marginTop: '10px',
-            opacity: (userGuess === "" || isNaN(parseInt(userGuess, 10))) ? 0.6 : 1
+          disabled={userGuess === "" || isNaN(parseInt(userGuess, 10))}
+          style={{
+            padding: "10px 20px",
+            backgroundColor: "#28a745",
+            color: "white",
+            border: "none",
+            borderRadius: "5px",
+            cursor: "pointer",
+            fontSize: "1em",
+            marginTop: "10px",
+            opacity:
+              userGuess === "" || isNaN(parseInt(userGuess, 10)) ? 0.6 : 1,
           }}
         >
           Comprobar
