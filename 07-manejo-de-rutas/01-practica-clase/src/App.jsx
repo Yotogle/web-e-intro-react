@@ -13,7 +13,7 @@ export const App = () => {
       <NavBar />
       <Routes>
         <Route path="/" element={<Home/>}/> {/* Home */}
-        <Route path="/about" element={<AboutUs/>}/>
+        <Route path="/about-us" element={<AboutUs/>}/>
         <Route path="/store" element={<Store/>}/>
         <Route path="/carrito" element={<Cart/>}/>
         <Route path="*" element={<NotFound/>}/>

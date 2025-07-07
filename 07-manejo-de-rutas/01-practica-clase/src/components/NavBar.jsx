@@ -31,7 +31,7 @@ export const NavBar = () => {
                             {/* <a className="nav-link" href="#">
                                 AboutUs
                             </a> */}
-                            <Link className="nav-link" to="/about">AboutUs</Link>
+                            <Link className="nav-link" to="/about-us">AboutUs</Link>
                         </li>
                         <li className="nav-item">
                             {/* <a className="nav-link" href="#">
