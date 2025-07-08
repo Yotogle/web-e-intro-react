@@ -62,6 +62,12 @@ button:focus-visible {
 .like{
    width: 320px;
 }
+.cerrarbtn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: auto;
+}
 
 @media (prefers-color-scheme: light) {
   :root {

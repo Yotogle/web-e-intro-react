@@ -5,7 +5,10 @@ export const TweetForm = ({ onAddTweet }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!text.trim()) return;
+    if (!text.trim()) {
+
+      alert("El tweet no puede estar vacío."); 
+    }
     onAddTweet(text);
     setText("");
   };
@@ -17,8 +20,8 @@ export const TweetForm = ({ onAddTweet }) => {
         value={text}
         onChange={(e) => setText(e.target.value)}
         placeholder="¿Qué estás pensando?"
+        maxLength="280" 
       />
-
       <button type="submit">Tweet</button>
     </form>
   );
