@@ -1,10 +1,10 @@
-import React from 'react'
+
 
 export const Home = () => {
   return (
     <div>
-      Inicio
+      <h1>Consultorio Médico</h1>
+      <p>Bienvenido al sistema de gestión de citas médicas</p>
     </div>
-  )
+  );
 }
-
